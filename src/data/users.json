@@ -1,0 +1,26 @@
+{
+    "users": [
+      {
+        "id": "1",
+        "username": "lucy_mcginn",
+        "fullName": " lucy Mcginn",
+        "profilePic": "https://i.pravatar.cc/150?img=1",
+        "bio": "Photography enthusiast | Travel lover 🌎",
+        "followers": 1234,
+        "following": 543,
+        "posts": ["1", "2"],
+        "email": "john@gmail.com"
+      },
+      {
+        "id": "2",
+        "username": "susan_smith",
+        "fullName": "susan Smith",
+        "profilePic": "https://i.pravatar.cc/150?img=2",
+        "bio": "Digital artist 🎨 | Coffee addict ☕",
+        "followers": 2345,
+        "following": 432,
+        "posts": ["3", "4"],
+        "email": "susan@gmail.com"
+      }
+    ]
+  }

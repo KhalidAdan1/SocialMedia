@@ -1,0 +1,23 @@
+{
+    "posts": [
+      {
+        "id": "1",
+        "userId": "1",
+        "caption": "Beautiful sunset at the beach! 🌅",
+        "imageUrl": "https://picsum.photos/id/1/500/500",
+        "likes": 123,
+        "comments": ["1", "2"],
+        "timestamp": "2024-02-19T18:25:43.511Z"
+      },
+      {
+        "id": "2",
+        "userId": "1",
+        "caption": "Coffee time ☕",
+        "imageUrl": "https://picsum.photos/id/2/500/500",
+        "likes": 89,
+        "comments": ["3"],
+        "timestamp": "2024-02-19T15:25:43.511Z"
+      }
+    ]
+  
+}
