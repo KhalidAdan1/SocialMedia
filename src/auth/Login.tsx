@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TouchableOpacity, View } from "react-native"
+import { Text, TouchableOpacity, View } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import Icon from 'react-native-vector-icons/Ionicons';
 import InputField from "../ components/InputField";
@@ -20,10 +20,10 @@ return (
         <TouchableOpacity
         className="absolute top-12 left-3 p-5 rounded-full"
         onPress={() => {
-            router.push('/auth/Welcome');
+            router.push('Welcome');
           } }
         >
-        <Icon name="arrow-back-outline" size={36} color="#CAC4C4" />
+        Welcome
         </TouchableOpacity>
         <InputField 
                   label='Email'
@@ -53,10 +53,13 @@ return (
         <TouchableOpacity 
         className="text-gray-700 text-center font-sans text-sm"
         onPress={()=>{
-            router.push('/auth/Welcome')
+            router.push('Welcome')
         }}
         >
-            Don't have an account? Register
+          <Text>
+          Don't have an account? Register
+          </Text>
+
         </TouchableOpacity>
     </View>
 

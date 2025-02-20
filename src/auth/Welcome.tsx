@@ -16,19 +16,25 @@ const Welcome = () =>{
             className="max-w-md py-4 bg-blue-500 rounded-xl
                    flex items-center justify-center mx-6"
             onPress={()=>{
-                router.navigate('/auth/Login')
+                router.push('Login')
             }}
             >
+                <Text>
                 Sign in
+                </Text>
+
             </TouchableOpacity>
             <TouchableOpacity 
             className="max-w-md py-4 bg-blue-500 rounded-xl
                    flex items-center justify-center mx-6"
             onPress={()=>{
-                router.navigate('/auth/Register')
+                router.navigate('./auth/Register')
             }}
             >
+                <Text>
                 Sign Up
+                </Text>
+               
             </TouchableOpacity>
         </View>
     </SafeAreaView>

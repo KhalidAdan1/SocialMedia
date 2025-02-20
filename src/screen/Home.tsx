@@ -6,9 +6,9 @@ import { Icon } from 'react-native-vector-icons/Icon';
 import { useData } from '../hooks/postData';
 import { PostCard } from '../ components/Postcard';
 
-type HomeProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
+type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
-const Home = ({ route, navigation }: HomeProps) => {
+const Home = ({ route, navigation }: Props) => {
   const { name } = route.params;
   const { posts } = useData();
   return (
@@ -18,8 +18,10 @@ const Home = ({ route, navigation }: HomeProps) => {
         onPress={() => {
           navigation.push('Settings');
         }}
-      >
-        <Icon name="settings" size={24} color="black" />
+      ><Text>
+        Settings
+      </Text>
+
       </TouchableOpacity>
       <FlatList
       data={posts}

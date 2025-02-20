@@ -23,7 +23,10 @@ const Register = () =>{
                                 router.push('/auth/Welcome');
                               } }
                             >
-                            <Icon name="arrow-back-outline" size={36} color="#CAC4C4" />
+                              <Text>
+                              Go back
+                              </Text>
+                           
                             </TouchableOpacity>
                 </View>
                 <View
@@ -70,7 +73,10 @@ const Register = () =>{
                     onPress={()=>{
                         router.navigate('/auth/Login')
                     }}>
-                        Already have an Account? Login
+                      <Text>
+                      Already have an Account? Login
+                      </Text>
+
                     </TouchableOpacity>
                 </View>
             </SafeAreaView>

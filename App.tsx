@@ -1,6 +1,11 @@
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text } from 'react-native';
+import { AppNavigator } from './src/navigation/AppNav';
+import { AuthNavigator } from './src/navigation/AuthNav';
 
 
 export type RootStackParamList = {
@@ -9,12 +14,27 @@ export type RootStackParamList = {
   Settings : undefined
 }; 
 
+export type AuthStackParamList = {
+  Login: undefined;
+  Register: undefined;
+  Welcome:undefined;
+};
+
 
 export default function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const Stack = createStackNavigator();
   return (
-    <View className="flex-1 justify-center items-center bg-white">
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        {isAuthenticated ? (
+          <Stack.Screen name="App" component={AppNavigator} />
+        ) : (
+          <Stack.Screen name="Auth" component={AuthNavigator} />
+        )}
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
+
+
