@@ -1,9 +1,17 @@
-import { router } from "expo-router";
-import { SafeAreaView, View, Text, TouchableOpacity} from "react-native"
+import { useNavigation } from "@react-navigation/native";
 
+import { SafeAreaView, View, Text, TouchableOpacity} from "react-native"
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { AuthStackParamList } from "../navigation/AuthNav";
+
+type NavigationProp = NativeStackNavigationProp<AuthStackParamList>;
 
 
 const Welcome = () =>{
+    
+
+
+    const navigation = useNavigation<NavigationProp>();
    return(
     <SafeAreaView>
         <View className=" flex items-center justify-center">
@@ -14,9 +22,9 @@ const Welcome = () =>{
         <View className="mt-20">
             <TouchableOpacity 
             className="max-w-md py-4 bg-blue-500 rounded-xl
-                   flex items-center justify-center mx-6"
+                   flex items-center justify-center mx-6 mt-20"
             onPress={()=>{
-                router.push('Login')
+                navigation.navigate('Login')
             }}
             >
                 <Text>
@@ -26,9 +34,9 @@ const Welcome = () =>{
             </TouchableOpacity>
             <TouchableOpacity 
             className="max-w-md py-4 bg-blue-500 rounded-xl
-                   flex items-center justify-center mx-6"
+                   flex items-center justify-center mx-6 mt-6"
             onPress={()=>{
-                router.navigate('./auth/Register')
+                navigation.navigate('Register')
             }}
             >
                 <Text>

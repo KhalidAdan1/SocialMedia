@@ -1,5 +1,5 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../App'; // Adjust the import path as needed
+import { RootStackParamList } from '../../App'; 
 import React from 'react';
 import { SafeAreaView, TouchableOpacity , Text, FlatList} from 'react-native';
 import { Icon } from 'react-native-vector-icons/Icon';
@@ -11,9 +11,10 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 const Home = ({ route, navigation }: Props) => {
   const { name } = route.params;
   const { posts } = useData();
+  
   return (
     <SafeAreaView className="flex justify-center items-center flex-1">
-      <Text className="flex justify-center items-center flex-auto">Home {name}</Text>
+      <Text className="flex justify-center items-center flex-auto">Welcome Back {name}</Text>
       <TouchableOpacity
         onPress={() => {
           navigation.push('Settings');

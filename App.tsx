@@ -11,7 +11,8 @@ import { AuthNavigator } from './src/navigation/AuthNav';
 export type RootStackParamList = {
   Home: {name : string};
   Profile: undefined;
-  Settings : undefined
+  Settings : undefined;
+  Support : undefined;
 }; 
 
 export type AuthStackParamList = {
@@ -23,6 +24,11 @@ export type AuthStackParamList = {
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+
+  const handleLoginSuccess = () => {
+    setIsAuthenticated(true);
+  };
   const Stack = createStackNavigator();
   return (
     <NavigationContainer>
@@ -30,7 +36,12 @@ export default function App() {
         {isAuthenticated ? (
           <Stack.Screen name="App" component={AppNavigator} />
         ) : (
-          <Stack.Screen name="Auth" component={AuthNavigator} />
+          <Stack.Screen 
+            name="Auth" 
+            component={(props:any) => (
+              <AuthNavigator {...props} onLoginSuccess={handleLoginSuccess} />
+            )}
+          />
         )}
       </Stack.Navigator>
     </NavigationContainer>

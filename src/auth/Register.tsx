@@ -3,9 +3,13 @@ import InputField from "../ components/InputField";
 import { SafeAreaView, Text, TouchableOpacity, View } from "react-native";
 import { router } from "expo-router";
 import { Icon } from "react-native-vector-icons/Icon";
-import { DefaultTheme } from "@react-navigation/native";
-
+import { DefaultTheme, useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { AuthStackParamList } from "../../App";
+type NavigationProp = NativeStackNavigationProp<AuthStackParamList>;
 const Register = () =>{
+ 
+     const navigation = useNavigation<NavigationProp>();
     const [form , setForm]= useState({
             name: '',
             email: '',
@@ -20,7 +24,7 @@ const Register = () =>{
                     <TouchableOpacity
                             className="absolute top-12 left-3 p-5 rounded-full"
                             onPress={() => {
-                                router.push('/auth/Welcome');
+                                navigation.navigate('Welcome');
                               } }
                             >
                               <Text>
@@ -68,10 +72,16 @@ const Register = () =>{
               />
                 </View>
                 <View>
+                  <TouchableOpacity onPress={()=>{
+                    navigation.navigate('Home')
+                  }}
+                  ></TouchableOpacity>
+                </View>
+                <View>
                     <TouchableOpacity
                     className="text-gray-700 text-center font-sans text-sm"
                     onPress={()=>{
-                        router.navigate('/auth/Login')
+                        navigation.navigate('Login')
                     }}>
                       <Text>
                       Already have an Account? Login
