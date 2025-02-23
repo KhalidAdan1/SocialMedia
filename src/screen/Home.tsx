@@ -9,15 +9,15 @@ import { PostCard } from '../ components/Postcard';
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
 const Home = ({ route, navigation }: Props) => {
-  const { name } = route.params;
+
   const { posts } = useData();
   
   return (
     <SafeAreaView className="flex justify-center items-center flex-1">
-      <Text className="flex justify-center items-center flex-auto">Welcome Back {name}</Text>
+      <Text className="flex justify-center items-center flex-auto">Welcome Back </Text>
       <TouchableOpacity
         onPress={() => {
-          navigation.push('Settings');
+          navigation.navigate('Settings');
         }}
       ><Text>
         Settings

@@ -10,7 +10,7 @@ export type AuthStackParamList = {
   Login: undefined;
   Register: undefined;
   Welcome:undefined;
-  Home:{name:string};
+  Home:undefined;
 };
 
 const Stack = createStackNavigator<AuthStackParamList>();

@@ -9,7 +9,7 @@ import { AuthNavigator } from './src/navigation/AuthNav';
 
 
 export type RootStackParamList = {
-  Home: {name : string};
+  Home: undefined;
   Profile: undefined;
   Settings : undefined;
   Support : undefined;

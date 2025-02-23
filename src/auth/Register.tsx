@@ -71,12 +71,19 @@ const Register = () =>{
               }}
               />
                 </View>
-                <View>
-                  <TouchableOpacity onPress={()=>{
-                    navigation.navigate('Home')
-                  }}
-                  ></TouchableOpacity>
-                </View>
+                <View className="flex items-center justify-center">
+                        <TouchableOpacity 
+                        className="text-gray-700 text-center font-sans text-sm"
+                        onPress={()=>{
+                            navigation.navigate('Home')
+                        }}
+                        >
+                          <Text>
+                            Continue
+                          </Text>
+                
+                        </TouchableOpacity>
+                    </View>
                 <View>
                     <TouchableOpacity
                     className="text-gray-700 text-center font-sans text-sm"

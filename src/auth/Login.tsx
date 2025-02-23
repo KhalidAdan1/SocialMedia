@@ -12,14 +12,14 @@ type NavigationProp = NativeStackNavigationProp<AuthStackParamList>;
 type LoginProps = {
   onLoginSuccess: () => void;
 };
- 
-const Login =({onLoginSuccess}:LoginProps)=>{
+  
+const Login =({ navigation ,onLoginSuccess}:LoginProps)=>{
   
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   
- const navigation = useNavigation<NavigationProp>();
+ 
     const [form , setForm]= useState({
         name: '',
         email: '',
