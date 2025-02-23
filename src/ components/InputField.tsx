@@ -10,28 +10,31 @@ declare interface InputFieldProps extends TextInputProps {
     labelStyle?: string;
 }
 
-const InputField = ({ label,
-secureTextEntry = false,
-...props
-}: InputFieldProps ) =>{
-    return (
- <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? "padding" : "height"}>
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <View className="w-full my-2">
-            <Text className="text-[20px] ml-2 text-white">
-        {label}
-            </Text>
-            <View className="flex flex-row justify-start items-center relative bg-gray-200 rounded-full border
-            border-neutral-200 focus:border-primary-500 w-full">
-                <TextInput className="rounded-full p-4 text-blue-700 text-[15px] flex-1 h-14 text-left w-full" secureTextEntry={secureTextEntry}
-                {...props}
-                />
-            </View>
-        </View>
-    </TouchableWithoutFeedback>
- </KeyboardAvoidingView>
-    )
+
+interface InputFieldProps extends TextInputProps {
+  label: string;
+  error?: string;
 }
 
+const InputField: React.FC<InputFieldProps> = ({
+  label,
+  error,
+  className = "",
+  ...props
+}) => {
+  return (
+    <View className={className}>
+      <Text className="text-gray-700 mb-2 font-medium">{label}</Text>
+      <TextInput
+        className={`w-full px-4 py-3 rounded-lg border ${
+          error ? "border-red-500" : "border-gray-300"
+        } bg-white`}
+        placeholderTextColor="#9CA3AF"
+        {...props}
+      />
+      {error && <Text className="text-red-500 text-sm mt-1">{error}</Text>}
+    </View>
+  );
+};
 
 export default InputField;
