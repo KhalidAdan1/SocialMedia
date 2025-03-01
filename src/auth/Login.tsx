@@ -1,14 +1,9 @@
 import React, { useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
-import Icon from 'react-native-vector-icons/Ionicons';
 import InputField from "../ components/InputField";
-import { router } from "expo-router";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { AuthStackParamList } from "../navigation/AuthNav";
-import { useNavigation } from "@react-navigation/native";
 
-type NavigationProp = NativeStackNavigationProp<AuthStackParamList>;
+
 type LoginProps = {
   onLoginSuccess: () => void;
 };
@@ -81,7 +76,7 @@ return (
     <View>
     <TouchableOpacity 
       onPress={handleLogin}
-      className="max-w-md py-4 bg-blue-400 rounded-xl"
+      className="max-w-md py-4 bg-blue-600 rounded-xl"
     >
       <Text>Login</Text>
     </TouchableOpacity>
