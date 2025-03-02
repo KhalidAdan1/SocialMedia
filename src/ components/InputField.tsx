@@ -1,5 +1,5 @@
 import React from "react";
-import { Keyboard, KeyboardAvoidingView, Platform, Text, TextInput, TextInputProps, TouchableWithoutFeedback } from "react-native";
+import { Text, TextInput, TextInputProps } from "react-native";
 import { View } from "react-native";
 
 declare interface InputFieldProps extends TextInputProps {
