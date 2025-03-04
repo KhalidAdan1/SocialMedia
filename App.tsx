@@ -1,9 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { View, Text } from 'react-native';
 import { AppNavigator } from './src/navigation/AppNav';
 import { AuthNavigator } from './src/navigation/AuthNav';
 
