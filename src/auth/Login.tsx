@@ -77,6 +77,7 @@ return (
     <TouchableOpacity 
       onPress={handleLogin}
       className="max-w-md py-4 bg-blue-500 rounded-xl"
+      testID="button" 
     >
       <Text>Login</Text>
     </TouchableOpacity>

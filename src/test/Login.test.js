@@ -1,16 +1,10 @@
-import { render } from '@testing-library/react-native';
+import { fireEvent, render , screen } from '@testing-library/react-native';
 import Login from '../auth/Login';
 
-test('Wether the Email works', ()=>{
-    render(<Login />)
+test('Wether the Login button works', ()=>{
+  global.alert = jest.fn();
+  render(<Login />);
+  const login = screen.getByTestId('button');
+  fireEvent.press(login);
 });
 
-const mockNavigate = jest.fn();
-const mockOnLoginSuccess = jest.fn();
-
-describe('Login Component', () => {
-    beforeEach(() => {
-      mockNavigate.mockReset();
-      mockOnLoginSuccess.mockReset();
-    });
-});
