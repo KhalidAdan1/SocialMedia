@@ -2,7 +2,7 @@ import { render } from '@testing-library/react-native';
 import Login from '../auth/Login';
 
 test('Wether the Email works', ()=>{
-    const { getByText } = render(<Login />)
+    render(<Login />)
 });
 
 const mockNavigate = jest.fn();
