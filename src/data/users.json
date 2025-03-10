@@ -16,8 +16,8 @@
         "username": "susan_smith",
         "fullName": "susan Smith",
         "profilePic": "https://i.pravatar.cc/150?img=2",
-        "bio": "Digital artist 🎨 | Coffee addict ☕",
-        "followers": 2345,
+        "bio": "Digital artist",
+        "followers": 21345,
         "following": 432,
         "posts": ["3", "4"],
         "email": "susan@gmail.com"

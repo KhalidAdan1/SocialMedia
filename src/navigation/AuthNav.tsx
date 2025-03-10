@@ -1,10 +1,8 @@
-
 import { createStackNavigator } from '@react-navigation/stack';
 import Login from '../auth/Login';
 import Register from '../auth/Register';
 import Welcome from '../auth/Welcome';
 import Home from '../screen/Home';
-
 
 export type AuthStackParamList = {
   Login: undefined;

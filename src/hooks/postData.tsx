@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import users from '../data/users.json';
 import posts from '../data/post.json';
