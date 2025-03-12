@@ -4,21 +4,21 @@
         "id": "1",
         "postId": "1",
         "userId": "2",
-        "text": "Wow, amazing view! 😍",
+        "text": "Wow",
         "timestamp": "2024-02-19T18:30:43.511Z"
       },
 {
     "id": "2",
     "postId": "1",
     "userId": "1",
-    "text": "Thanks! It was incredible",
+    "text": "Thanks",
     "timestamp": "2024-02-19T18:35:43.511Z"
   },
   {
     "id": "3",
     "postId": "2",
     "userId": "2",
-    "text": "Enjoy your coffee! ☕",
+    "text": "Enjoy your coffee",
     "timestamp": "2024-02-19T15:30:43.511Z"
   }
 ]
