@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Alert, SafeAreaView, Text, TouchableOpacity, View } from "react-native";
 import { NavigationProp } from "@react-navigation/native";
 import InputField from "../ components/InputField";
-
 export type AuthStackParamList = {
   Welcome: undefined;
   Login: undefined;

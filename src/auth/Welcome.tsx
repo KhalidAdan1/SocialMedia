@@ -1,5 +1,4 @@
 import { useNavigation } from "@react-navigation/native";
-
 import { SafeAreaView, View, Text, TouchableOpacity} from "react-native"
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { AuthStackParamList } from "../navigation/AuthNav";
