@@ -17,8 +17,8 @@ const Welcome = () =>{
         </View>
         <View className="mt-20">
             <TouchableOpacity 
-            className="max-w-md py-4 bg-blue-500 rounded-xl
-                   flex items-center justify-center mx-6 mt-20"
+            className="max-w-md py-4 bg-blue-400 rounded-xl
+                   flex items-center justify-center mx-8 mt-20"
             onPress={()=>{
                 navigation.navigate('Login')
             }}
