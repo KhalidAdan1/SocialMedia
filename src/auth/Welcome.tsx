@@ -7,9 +7,6 @@ type NavigationProp = NativeStackNavigationProp<AuthStackParamList>;
 
 
 const Welcome = () =>{
-    
-
-
     const navigation = useNavigation<NavigationProp>();
    return(
     <SafeAreaView>
