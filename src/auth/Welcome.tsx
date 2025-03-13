@@ -10,12 +10,12 @@ const Welcome = () =>{
     const navigation = useNavigation<NavigationProp>();
    return(
     <SafeAreaView>
-        <View className=" flex items-center justify-center">
-            <Text className="text-xl">
+        <View className="flex items-center justify-center">
+            <Text className="text-start text-lg">
                 Welcome to Gram
             </Text>
         </View>
-        <View className="mt-20">
+        <View className="mt-20 flex items-center">
             <TouchableOpacity 
             className="max-w-md py-4 bg-blue-400 rounded-xl
                    flex items-center justify-center mx-8 mt-20"
