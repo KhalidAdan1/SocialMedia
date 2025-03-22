@@ -1,8 +1,10 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AppNavigator } from './src/navigation/AppNav';
 import { AuthNavigator } from './src/navigation/AuthNav';
+import axios from 'axios';
+import Logi from './src/auth/Login';
 
 
 export type RootStackParamList = {
@@ -19,9 +21,9 @@ export type AuthStackParamList = {
 };
 
 
+
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-
 
   const handleLoginSuccess = () => {
     setIsAuthenticated(true);

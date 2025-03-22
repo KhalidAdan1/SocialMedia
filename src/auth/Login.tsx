@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import InputField from "../ components/InputField";
+import axios from "axios";
 
 type LoginProps = {
   onLoginSuccess: () => void;
@@ -12,6 +13,18 @@ const Login =({ navigation ,onLoginSuccess}:LoginProps)=>{
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const [ loginData , setLoginData] = useState(null)
+useEffect(()=> {
+  const fetch = async() =>{
+ try {
+  const response = await axios.get('/logi.json')
+  setLoginData(response.data);
+ } catch (error) {
+  console.log(error);
+ }
+fetch();
+  }
+} , [])
   
  
     const [form , setForm]= useState({
@@ -46,7 +59,8 @@ return (
             navigation.navigate('Welcome');
           } }
         >
-        Welcome
+          <Text>Welcome</Text>
+        
         </TouchableOpacity>
         <InputField 
                   label='Email'
@@ -91,8 +105,14 @@ return (
           <Text>
           Don't have an account? Register
           </Text>
+          {loginData && (
+          <Text>
+            {JSON.stringify(loginData)}
+          </Text>
+        )}
 
         </TouchableOpacity>
+        console.log( {JSON.stringify(loginData)});
     </View>
 
 
