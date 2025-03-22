@@ -3,6 +3,7 @@ import { Text, TouchableOpacity, View } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import InputField from "../ components/InputField";
 import axios from "axios";
+import logi from "../data/login.json"
 
 type LoginProps = {
   onLoginSuccess: () => void;
@@ -12,18 +13,20 @@ const Login =({ navigation ,onLoginSuccess}:LoginProps)=>{
   
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  
   const [ loginData , setLoginData] = useState(null)
 useEffect(()=> {
   const fetch = async() =>{
  try {
-  const response = await axios.get('/logi.json')
+  const response = await axios.get('/login.json')
   setLoginData(response.data);
+  console.log("API Response:", response.data);
  } catch (error) {
   console.log(error);
  }
-fetch();
+
   }
+  fetch();
 } , [])
   
  
@@ -112,7 +115,6 @@ return (
         )}
 
         </TouchableOpacity>
-        console.log( {JSON.stringify(loginData)});
     </View>
 
 
